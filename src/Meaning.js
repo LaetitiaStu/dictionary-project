@@ -21,12 +21,14 @@ export default function Meaning(props) {
             </div>
           );
         } else {
-          <div key={index}>
-            <p>
-              <strong>Defintion: </strong>
-              {definition.definition}
-            </p>
-          </div>;
+          return (
+            <div key={index}>
+              <p>
+                <strong>Defintion: </strong>
+                {definition.definition}
+              </p>
+            </div>
+          );
         }
       })}
     </div>
