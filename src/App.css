@@ -1,3 +1,33 @@
+main {
+  padding: 10px;
+  background-color: rgba(105, 61, 115, 0.24);
+}
+
+form {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  border: solid 1px #693d73;
+  padding: 6px;
+  border-radius: 7px;
+  color: #693d73;
+  background-color: rgba(105, 61, 115, 0.24);
+}
+
+a {
+  color: #693d73;
+}
+
+strong {
+  color: #693d73;
+  text-decoration: underline;
+}
+
 .App-header {
   margin: 30px 0;
 }

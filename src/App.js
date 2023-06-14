@@ -8,12 +8,22 @@ function App() {
       <div className="container">
         <header className="App-header">
           <img src={logo} className="Book-logo img-fluid" alt="logo" />
-          <h1>Dictionary</h1>
         </header>
+
         <main>
-          <Dictionary />
+          <h1>Dictionary</h1>
+
+          <Dictionary defaultKeyword="book" />
         </main>
-        <footer className="App-footer">Coded by Laetitia Stuchtey</footer>
+        <footer className="App-footer">
+          Coded by Laetitia Stuchtey, open source on{" "}
+          <a
+            href="https://github.com/LaetitiaStu/dictionary-project"
+            target="_blank"
+          >
+            Github
+          </a>
+        </footer>
       </div>
     </div>
   );

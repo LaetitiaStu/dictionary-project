@@ -1,0 +1,23 @@
+.btn {
+  border-color: #693d73;
+  color: #693d73;
+}
+
+.btn:hover {
+  background-color: #693d73;
+  color: white;
+  border-color: #693d73;
+}
+
+input::placeholder {
+  color: #693d73;
+}
+
+section {
+  border: solid 1px #693d73;
+  background-color: white;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(105, 61, 115, 0.24);
+}
