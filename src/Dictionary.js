@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, CSSProperties } from "react";
 import axios from "axios";
 import Results from "./Results";
+import ClipLoader from "react-spinners/ClipLoader";
 import "./Dicitionary.css";
 
 export default function Dictionary() {
@@ -51,6 +52,17 @@ export default function Dictionary() {
     );
   } else {
     load();
-    return "Loading";
+
+    return (
+      <div className="sweet-loading">
+        <ClipLoader
+          color="#693d73"
+          loading={true}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </div>
+    );
   }
 }
