@@ -9,7 +9,7 @@ export default function Images(props) {
           {props.images.map(function (image, index) {
             return (
               <div className="col-3">
-                <a href={image.src.landscape} target="_blank">
+                <a href={image.src.landscape} target="_blank" rel="noreferrer">
                   <img
                     key={index}
                     src={image.src.landscape}
