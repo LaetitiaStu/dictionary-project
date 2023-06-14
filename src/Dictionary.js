@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Images from "./Images";
 import ClipLoader from "react-spinners/ClipLoader";
 import "./Dicitionary.css";
 
@@ -8,14 +9,23 @@ export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [images, setImages] = useState(null);
 
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     setResults(response.data[0]);
+  }
+
+  function handleImageReponse(response) {
+    setImages(response.data.photos);
   }
 
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse);
+
+    let imageApiKey = "t0od536bd741534df59c1efabde0fbe3";
+    let imageApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${imageApiKey}`;
+    axios.get(imageApiUrl).then(handleImageReponse);
   }
 
   function handleSubmit(event) {
@@ -48,6 +58,7 @@ export default function Dictionary() {
           />
         </form>
         <Results results={results} />
+        <Images images={images} />
       </div>
     );
   } else {
